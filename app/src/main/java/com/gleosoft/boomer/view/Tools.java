@@ -5,10 +5,14 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 
 /**
- * Created by hohn on 2016/12/13.
+ *
  */
 
 public class Tools {
+
+    /**
+     * @return
+     */
     public static String getServerData() {
         String acceptStr = null;
         try {

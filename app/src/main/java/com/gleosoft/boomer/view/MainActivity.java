@@ -121,7 +121,9 @@ public class MainActivity extends Activity implements IAcceptServerData {
         public void run() {
             while (true) {
                 String data = Tools.getServerData();
-                acceptUdpData(data);
+                if(data != null) {
+                    acceptUdpData(data);
+                }
             }
         }
     }
