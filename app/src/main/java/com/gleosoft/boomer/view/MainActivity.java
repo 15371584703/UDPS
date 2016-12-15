@@ -154,9 +154,9 @@ public class MainActivity extends Activity implements IAcceptServerData {
 
 
     public class BThread implements Runnable {
-       String str = "";
-        public BThread(String msg) {
-            str = msg;
+       String msg = "";
+        public BThread(String Msg) {
+            msg = Msg;
         }
 
         @Override
@@ -164,7 +164,7 @@ public class MainActivity extends Activity implements IAcceptServerData {
             try{
             InetAddress serverAddr = InetAddress.getByName(IAcceptServerData.SERVERIP);
             DatagramSocket socket = new DatagramSocket();
-            byte[] buf = str.getBytes();
+            byte[] buf = msg.getBytes();
             DatagramPacket packet = new DatagramPacket(buf, buf.length, serverAddr, IAcceptServerData.SERVERPORT);
             socket.send(packet);
                 socket.send(packet);
